@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+</head>
+<body>
+<form action="login" method="get" onsubmit="return check();">
+    <label>用户名<input type="text" name="name"></label>
+    <label>密&emsp;码<input type="password" name="pwd"></label>
+    <input type="submit">
+</form>
+
+</body>
+<script>
+    let form = document.querySelector("form");
+    function check() {
+        if(form.name.value.length === 0 || form.pwd.value.length === 0) {
+            alert("请检查登录信息");
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>
